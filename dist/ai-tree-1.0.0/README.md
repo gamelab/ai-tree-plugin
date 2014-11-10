@@ -345,7 +345,7 @@ For example, a TimeTrial might play a slightly more sophisticated game of chess:
 	- Replace cached move with random move
 	- Is the game out of checkmate?
 
-This AI would consider moves much like the TimeLoop example, but in this case, if it finds a checkmate - a guaranteed win - it fails and ends the traveral early.
+This AI would consider moves much like the TimeLoop example, but in this case, if it finds a checkmate - a guaranteed win - it fails and ends the traversal early.
 
 ### Outer Nodes
 
@@ -432,8 +432,9 @@ Consider the following tree:
 
 * UntilSuccess
 	- Try to walk forward
-	- Inverter
+	- Sequencer
 		+ Turn left
+		+ Failure
 	- Counter (max 4)
 
 This will cause an entity to attempt to move from where it stands. If it can't go ahead, it will turn left and try again. The counter is used to ensure that it turns a full circle, and doesn't stand in one place spinning forever. (In the worst case, this causes your browser to hang.)
@@ -511,6 +512,8 @@ node.runsParent = false;
 
 If `runsParent` is true, a node that receives `STATUS_RUNNING` will also become `STATUS_RUNNING`. This allows you to create a tree or tree segment that remembers its current position, even in complicated nested structures.
 
+Note that outer nodes set `runsParent` to true by default. You can set this to false in the normal fashion. This will prevent them from using any running functionality whatsoever. Because you design your own outer nodes, this should not be necessary, but it is available.
+
 #### Inverters
 
 Sometimes you want a check to start something, and sometimes you want that same check to prevent something. For example, consider this AI tree:
@@ -534,7 +537,7 @@ Now we can create our zombie AI, which panics when it's alone:
 * Panic Sequencer
 	- Inverter
 		+ Is a zombie nearby?
-	- Run Screaming
+	- Run screaming
 
 #### Multi-Parenting
 
@@ -551,5 +554,7 @@ Alex J. Champandard gives an introduction to behavior trees at [AIGameDev.com](h
 Chris Simpson has written an informative article about constructing AI tree solutions for real games at [Gamasutra](http://www.gamasutra.com/blogs/ChrisSimpson/20140717/221339/Behavior_trees_for_AI_How_they_work.php).
 
 The Barrel example was initially coded by Lachlan Reid.
+
+Some of the nodes were designed by Ben Harding.
 
 Some inspiration was taken from former work done by Vlad at Instinct Entertainment.
