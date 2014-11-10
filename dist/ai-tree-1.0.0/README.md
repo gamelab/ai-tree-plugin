@@ -55,7 +55,7 @@ _Exercise_: Try adding a new kind of flier that tries to ram into random fliers 
 
 ### Loading the Plugin
 
-Acquire the full plugin, with examples and API documentation, [from Github]().
+Acquire the full plugin, with examples and API documentation, [from Github](https://github.com/gamelab/ai-tree-plugin).
 
 Obtain the latest version of the plugin from the `src/` folder. Use the minified version when possible.
 
