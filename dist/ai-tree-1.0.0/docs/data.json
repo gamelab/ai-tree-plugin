@@ -1,0 +1,1626 @@
+{
+    "project": {
+        "name": "ai-tree",
+        "description": "This plugin runs powerful, easy-to-use AI trees.",
+        "version": "1.0.0",
+        "url": "http://kiwijs.org/"
+    },
+    "files": {
+        "src/ai-tree-1.0.0.js": {
+            "name": "src/ai-tree-1.0.0.js",
+            "modules": {
+                "Plugins": 1
+            },
+            "classes": {
+                "Kiwi.Plugins.AiTree": 1,
+                "Kiwi.Plugins.AiTree.Ai": 1,
+                "Kiwi.Plugins.AiTree.OuterNode": 1,
+                "Kiwi.Plugins.AiTree.InnerNode": 1,
+                "Kiwi.Plugins.AiTree.Sequencer": 1,
+                "Kiwi.Plugins.AiTree.Selector": 1,
+                "Kiwi.Plugins.AiTree.UntilFailure": 1,
+                "Kiwi.Plugins.AiTree.UntilSuccess": 1,
+                "Kiwi.Plugins.AiTree.TimeLoop": 1,
+                "Kiwi.Plugins.AiTree.TimeTrial": 1,
+                "Kiwi.Plugins.AiTree.Inverter": 1,
+                "Kiwi.Plugins.AiTree.Success": 1,
+                "Kiwi.Plugins.AiTree.Failure": 1,
+                "Kiwi.Plugins.AiTree.Counter": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Kiwi.Plugins": 1,
+                "Kiwi.Plugins.AiTree": 1
+            }
+        }
+    },
+    "modules": {
+        "Kiwi": {
+            "name": "Kiwi",
+            "submodules": {
+                "Plugins": 1
+            },
+            "classes": {
+                "Kiwi.Plugins.AiTree": 1,
+                "Kiwi.Plugins.AiTree.Ai": 1,
+                "Kiwi.Plugins.AiTree.OuterNode": 1,
+                "Kiwi.Plugins.AiTree.InnerNode": 1,
+                "Kiwi.Plugins.AiTree.Sequencer": 1,
+                "Kiwi.Plugins.AiTree.Selector": 1,
+                "Kiwi.Plugins.AiTree.UntilFailure": 1,
+                "Kiwi.Plugins.AiTree.UntilSuccess": 1,
+                "Kiwi.Plugins.AiTree.TimeLoop": 1,
+                "Kiwi.Plugins.AiTree.TimeTrial": 1,
+                "Kiwi.Plugins.AiTree.Inverter": 1,
+                "Kiwi.Plugins.AiTree.Success": 1,
+                "Kiwi.Plugins.AiTree.Failure": 1,
+                "Kiwi.Plugins.AiTree.Counter": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Kiwi.Plugins": 1,
+                "Kiwi.Plugins.AiTree": 1
+            },
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1372
+        },
+        "Plugins": {
+            "name": "Plugins",
+            "submodules": {},
+            "classes": {
+                "Kiwi.Plugins.AiTree": 1,
+                "Kiwi.Plugins.AiTree.Ai": 1,
+                "Kiwi.Plugins.AiTree.OuterNode": 1,
+                "Kiwi.Plugins.AiTree.InnerNode": 1,
+                "Kiwi.Plugins.AiTree.Sequencer": 1,
+                "Kiwi.Plugins.AiTree.Selector": 1,
+                "Kiwi.Plugins.AiTree.UntilFailure": 1,
+                "Kiwi.Plugins.AiTree.UntilSuccess": 1,
+                "Kiwi.Plugins.AiTree.TimeLoop": 1,
+                "Kiwi.Plugins.AiTree.TimeTrial": 1,
+                "Kiwi.Plugins.AiTree.Inverter": 1,
+                "Kiwi.Plugins.AiTree.Success": 1,
+                "Kiwi.Plugins.AiTree.Failure": 1,
+                "Kiwi.Plugins.AiTree.Counter": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {
+                "Kiwi.Plugins": 1,
+                "Kiwi.Plugins.AiTree": 1
+            },
+            "module": "Kiwi",
+            "namespace": "",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1372,
+            "description": "AI Tree plugin, providing intuitive, powerful AI trees to the designer."
+        }
+    },
+    "classes": {
+        "Kiwi.Plugins.AiTree": {
+            "name": "Kiwi.Plugins.AiTree",
+            "shortname": "Kiwi.Plugins.AiTree",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1,
+            "description": "AI Tree plugin, providing intuitive, powerful AI trees to the designer."
+        },
+        "Kiwi.Plugins.AiTree.Ai": {
+            "name": "Kiwi.Plugins.AiTree.Ai",
+            "shortname": "Kiwi.Plugins.AiTree.Ai",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 37,
+            "description": "AI container component. Create and attach one of these to every\nAI actor.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Component",
+            "params": [
+                {
+                    "name": "entity",
+                    "description": "The entity to which these behaviours belong.",
+                    "type": "Kiwi.Entity"
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.OuterNode": {
+            "name": "Kiwi.Plugins.AiTree.OuterNode",
+            "shortname": "OuterNode",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 188,
+            "description": "Template for all responsive nodes. An Outer Node performs some process\n(usually an action or a condition check)\nthen returns a STATUS to its caller. This STATUS dictates the entire\ntree traversal. <br><br>\nAll nodes are based on the Outer Node.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Universal param object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name for the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "runsParent",
+                            "description": "Whether the parent inherits running",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.InnerNode": {
+            "name": "Kiwi.Plugins.AiTree.InnerNode",
+            "shortname": "InnerNode",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 429,
+            "description": "Inner Nodes are templates for the inner nodes that facilitate tree traveral.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.OuterNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "shuffle",
+                            "description": "Whether the node will shuffle its children.",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "runsParent",
+                            "description": "Whether the parent inherits running",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.Sequencer": {
+            "name": "Kiwi.Plugins.AiTree.Sequencer",
+            "shortname": "Sequencer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 637,
+            "description": "Inner node. Tries to execute a sequence. Steps through children one by one.\n<br><br>\nIf it reaches the end, it returns STATUS_SUCCESS.\n<br><br>\nIf it receives STATUS_FAILURE it returns STATUS_FAILURE.\n<br><br>\nIf it receives STATUS_RUNNING it returns STATUS_RUNNING\nand resumes from that node on the next update.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.InnerNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "shuffle",
+                            "description": "Whether the node will shuffle its children",
+                            "type": "Boolean",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.Selector": {
+            "name": "Kiwi.Plugins.AiTree.Selector",
+            "shortname": "Selector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 726,
+            "description": "Inner node. Tries to find a successful node. Steps through children.\n<br><br>\nIf it receives STATUS_SUCCESS, it returns STATUS_SUCCESS.\n<br><br>\nIf it reaches the end, it returns STATUS_FAILURE.\n<br><br>\nIf it receives STATUS_RUNNING it returns STATUS_RUNNING\nand resumes from that node on the next update.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.InnerNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "shuffle",
+                            "description": "Whether the node will shuffle its children",
+                            "type": "Boolean",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.UntilFailure": {
+            "name": "Kiwi.Plugins.AiTree.UntilFailure",
+            "shortname": "UntilFailure",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 813,
+            "description": "Inner node. Tries to repeat a sequence indefinitely.\n<br><br>\nIf it receives STATUS_FAILURE it returns STATUS_SUCCESS.\n<br><br>\nIf it receives STATUS_RUNNING it returns STATUS_RUNNING\nand resumes from that node on the next update.\n<br><br>\nCAUTION: This node can loop indefinitely.\nBe sure to provide an escape condition.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.InnerNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "shuffle",
+                            "description": "Whether the node will shuffle its children",
+                            "type": "Boolean",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.UntilSuccess": {
+            "name": "Kiwi.Plugins.AiTree.UntilSuccess",
+            "shortname": "UntilSuccess",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 904,
+            "description": "Inner node. Tries to find a success, indefinitely.\n<br><br>\nIf it receives STATUS_SUCCESS, it returns STATUS_SUCCESS.\n<br><br>\nIf it receives STATUS_RUNNING it returns STATUS_RUNNING\nand resumes from that node on the next update.\n<br><br>\nCAUTION: This node can loop indefinitely.\nBe sure to provide an escape condition.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.InnerNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "shuffle",
+                            "description": "Whether the node will shuffle its children",
+                            "type": "Boolean",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.TimeLoop": {
+            "name": "Kiwi.Plugins.AiTree.TimeLoop",
+            "shortname": "TimeLoop",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 995,
+            "description": "Inner node. Runs over and over for a specific duration.\nThis is useful for scheduling advanced tasks that are not expected\nto finish quickly, but do reach an acceptable approximation quickly.\n<br><br>\nIf it receives STATUS_RUNNING it returns STATUS_RUNNING\nand resumes from that node on the next update.\n<br><br>\nReturns STATUS_SUCCESS when time runs out.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.InnerNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "shuffle",
+                            "description": "Whether the node will shuffle its children",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "timerDuration",
+                            "description": "How long the node runs,\nin milliseconds",
+                            "type": "Number",
+                            "optional": true,
+                            "optdefault": "5"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.TimeTrial": {
+            "name": "Kiwi.Plugins.AiTree.TimeTrial",
+            "shortname": "TimeTrial",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1087,
+            "description": "Inner node. Runs over and over for a specific duration.\nUnlike TimeLoop, it returns if it encounters a failure.\nThis is useful for scheduling advanced tasks that are not expected\nto finish quickly, but might need to stop.\n<br><br>\nIf it receives STATUS_RUNNING it returns STATUS_RUNNING\nand resumes from that node on the next update.\n<br><br>\nIf it receives STATUS_FAILURE it returns STATUS_FAILURE.\n<br><br>\nReturns STATUS_SUCCESS when time runs out.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.InnerNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "shuffle",
+                            "description": "Whether the node will shuffle its children",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "timerDuration",
+                            "description": "How long the node runs,\nin milliseconds",
+                            "type": "Number",
+                            "optional": true,
+                            "optdefault": "5"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.Inverter": {
+            "name": "Kiwi.Plugins.AiTree.Inverter",
+            "shortname": "Inverter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1187,
+            "description": "Inner node. Inverts its child.\n<br><br>\nIf it receives STATUS_SUCCESS it returns STATUS_FAILURE.\n<br><br>\nIf it receives STATUS_FAILURE it returns STATUS_SUCCESS.\n<br><br>\nIf it receives STATUS_RUNNING it returns STATUS_RUNNING.\n<br><br>\nIf it has no children it returns STATUS_FAILURE. It can only have one child,\nand will replace it if another is added.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.InnerNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "shuffle",
+                            "description": "Whether the node will shuffle its children",
+                            "type": "Boolean",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.Success": {
+            "name": "Kiwi.Plugins.AiTree.Success",
+            "shortname": "Success",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1291,
+            "description": "Very simple outer node that always returns STATUS_SUCCESS.\nThis can be useful for controlling sophisticated behaviours.\nFor example, if you use a Selector to perform one of a series of tasks,\nnone of which are guaranteed to return success, but you want the Selector\nto always succeed, you can add a Success node to the end.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.OuterNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.Failure": {
+            "name": "Kiwi.Plugins.AiTree.Failure",
+            "shortname": "Failure",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1331,
+            "description": "Very simple outer node that always returns STATUS_FAILURE.\nThis can be useful for controlling sophisticated behaviours.\nFor example, if you use a Sequencer to perform a series of tasks,\nbut would like the Sequencer to fail for reasons of flow control,\nyou can add a Failure node to the end.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.OuterNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Kiwi.Plugins.AiTree.Counter": {
+            "name": "Kiwi.Plugins.AiTree.Counter",
+            "shortname": "Counter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree",
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1372,
+            "description": "Counter outer node. This node counts to a maximum value.\n<br><br>\nThe node increments its counter by 1 and returns STATUS_FAILURE.\n<br><br>\nIf the node reaches its maximum, it instead returns STATUS_SUCCESS.\n<br><br>\nThis node is very useful for causing an UntilSuccess or UntilFailure node\nto finish after a certain number of repetitions.",
+            "is_constructor": 1,
+            "extends": "Kiwi.Plugins.AiTree.OuterNode",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Generic parameter object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "Name of the node",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "max",
+                            "description": "Number to which to count",
+                            "type": "Number",
+                            "optional": true,
+                            "optdefault": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 16,
+            "description": "Uses various methods to seek the best available time in millis.\nThis method uses high precision time, so it is possible to specify\ndecimal milliseconds; however this feature is only available in compatible\nbrowsers.",
+            "itemtype": "method",
+            "name": "getTime",
+            "return": {
+                "description": "Current time in milliseconds",
+                "type": "Number"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 49,
+            "description": "The root node of the AI tree, where all decision-making begins.\nThis is the internal value and should not be accessed without\nalso performing the proper rebuilds via this.setRoot().",
+            "itemtype": "property",
+            "name": "_root",
+            "type": "{Kiwi.Plugins.AiTree.OuterNode}",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 59,
+            "description": "Master list of all unique child nodes.",
+            "itemtype": "property",
+            "name": "uniqueChildren",
+            "type": "{array}",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 71,
+            "description": "The root node of the AI tree, where all decision-making begins.",
+            "itemtype": "property",
+            "name": "root",
+            "type": "{Kiwi.Plugins.AiTree.OuterNode}",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 86,
+            "description": "Adds a child to the node tree. Because this base can only have one child,\nthe root, this just calls this.setRoot().",
+            "itemtype": "method",
+            "name": "addChild",
+            "params": [
+                {
+                    "name": "candidate",
+                    "description": "",
+                    "type": "Kiwi.Plugins.AiTree.OuterNode"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Kiwi.Plugins.AiTree.OuterNode"
+            },
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 97,
+            "description": "Whether this node has a specific ancestor. Because this cannot have ancestors\nby definition, always returns false.",
+            "itemtype": "method",
+            "name": "hasAncestor",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 107,
+            "description": "Whether this node has a specific descendant.",
+            "itemtype": "method",
+            "name": "hasDescendant",
+            "params": [
+                {
+                    "name": "candidate",
+                    "description": "",
+                    "type": "Kiwi.Plugins.AiTree.OuterNode"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 124,
+            "description": "Attaches the root child of the node tree. This function ensures that all\nconnections are rebuilt. It is automatically called if \"root\" is\naccessed directly.",
+            "itemtype": "method",
+            "name": "setRoot",
+            "params": [
+                {
+                    "name": "candidate",
+                    "description": "",
+                    "type": "Kiwi.Plugins.AiTree.OuterNode"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Kiwi.Plugins.AiTree.OuterNode"
+            },
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 141,
+            "description": "Updates the Ai tree and makes decisions. Call this once per frame.",
+            "itemtype": "method",
+            "name": "update",
+            "return": {
+                "description": "A number, a constant referring to the status of the tree.",
+                "type": "Number"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 164,
+            "description": "Updates the census, a list of all unique child nodes.",
+            "itemtype": "method",
+            "name": "updateCensus",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Kiwi.Plugins.AiTree.Ai",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 206,
+            "description": "Optional name for the node. This is not used internally, but is useful\nfor debugging. If it has no value given in params, it takes it\nfrom the DEFAULT_NODE_NAME.",
+            "itemtype": "property",
+            "name": "name",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 216,
+            "description": "Status regulates traveral. Inner nodes choose their next action\nbased on the status they receive.",
+            "itemtype": "property",
+            "name": "status",
+            "type": "{number}",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 225,
+            "description": "Has the node just returned STATUS_RUNNING?",
+            "itemtype": "property",
+            "name": "runningDirty",
+            "type": "boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 234,
+            "description": "Does the node pass STATUS_RUNNING up the tree?",
+            "itemtype": "property",
+            "name": "runsParent",
+            "type": "boolean",
+            "default": "true",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 243,
+            "description": "Any parent nodes of this node. A node may have multiple parents,\nbut may not create cyclic graphs.",
+            "itemtype": "property",
+            "name": "parents",
+            "type": "array",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 255,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Untitled outer node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 266,
+            "description": "Status of a node that has not yet run on this tree traversal.",
+            "itemtype": "property",
+            "name": "STATUS_READY",
+            "type": "{number}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 275,
+            "description": "Status of a node that will continue to run on an upcoming tree traversal.",
+            "itemtype": "property",
+            "name": "STATUS_RUNNING",
+            "type": "{number}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 284,
+            "description": "Status of a node that has succeeded in its task.",
+            "itemtype": "property",
+            "name": "STATUS_SUCCESS",
+            "type": "{number}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 293,
+            "description": "Status of a node that has failed in its task.",
+            "itemtype": "property",
+            "name": "STATUS_FAILURE",
+            "type": "{number}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 302,
+            "description": "Status of a node that has encountered an error.",
+            "itemtype": "property",
+            "name": "STATUS_ERROR",
+            "type": "{number}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 311,
+            "description": "Adds a parent to this node. Do not call directly. Does not check for cycling.",
+            "itemtype": "method",
+            "name": "addParent",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 326,
+            "description": "Customisable stub for Inner Node behaviors.",
+            "itemtype": "method",
+            "name": "_onUpdate",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 336,
+            "description": "Removes a parent from this node. Do not call directly.\nDoes not check for cycling.",
+            "itemtype": "method",
+            "name": "removeParent",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 353,
+            "description": "Resets the tree at the end of an update",
+            "itemtype": "method",
+            "name": "reset",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 376,
+            "description": "Customisable stub for Outer Node behaviours.\nOverride this method to create your own custom behaviours.",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 387,
+            "description": "Runs node functionality. Returns status. Do not override this function;\nuse _run() to define user code.",
+            "itemtype": "method",
+            "name": "update",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 408,
+            "description": "Updates the tree census. This is just a signal which activates the root\nKiwi.Plugins.AiTree.Ai object census method.",
+            "itemtype": "method",
+            "name": "updateCensus",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.OuterNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 444,
+            "description": "The child nodes of this node.",
+            "itemtype": "property",
+            "name": "children",
+            "type": "array",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 452,
+            "description": "If the node has a running child, it is tracked here.",
+            "itemtype": "property",
+            "name": "currentlyRunningNode",
+            "type": "{Kiwi.Plugins.AiTree.OuterNode}",
+            "default": "undefined",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 461,
+            "description": "Whether the node shuffles its children every update.",
+            "itemtype": "property",
+            "name": "shuffle",
+            "type": "boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 477,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Untitled inner node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 488,
+            "description": "Passes a child node as candidate for inclusion.\nChecks for validity; a child cannot be its own parent or ancestor.\nCandidate is only appended if it is legal.",
+            "itemtype": "method",
+            "name": "addChild",
+            "params": [
+                {
+                    "name": "candidate",
+                    "description": "Node to add as child",
+                    "type": "Kiwi.Plugins.AiTree.OuterNode"
+                }
+            ],
+            "return": {
+                "description": "boolean"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 519,
+            "description": "Returns all children and subsequent children. Does not eliminate duplicates.",
+            "itemtype": "method",
+            "name": "getDescendants",
+            "return": {
+                "description": "List of all descendant nodes",
+                "type": "Array"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 539,
+            "description": "Recursive search for a particular node.\nA node counts as its own ancestor.",
+            "itemtype": "method",
+            "name": "hasAncestor",
+            "params": [
+                {
+                    "name": "candidate",
+                    "description": "Node to find",
+                    "type": "Kiwi.Plugins.AiTree.OuterNode"
+                }
+            ],
+            "return": {
+                "description": "boolean"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 564,
+            "description": "Returns whether a particular node is beneath this node.",
+            "itemtype": "method",
+            "name": "hasDescendant",
+            "params": [
+                {
+                    "name": "candidate",
+                    "description": "Node to find",
+                    "type": "Kiwi.Plugins.AiTree.OuterNode"
+                }
+            ],
+            "return": {
+                "description": "boolean"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 583,
+            "description": "Shared inner node functions",
+            "itemtype": "method",
+            "name": "_onUpdate",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 595,
+            "description": "Removes a child of this node, if it exists.",
+            "itemtype": "method",
+            "name": "removeChild",
+            "params": [
+                {
+                    "name": "candidate",
+                    "description": "Node to remove",
+                    "type": "Kiwi.Plugins.AiTree.OuterNode"
+                }
+            ],
+            "return": {
+                "description": "boolean"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 619,
+            "description": "Reorders the child array to create a random output.",
+            "itemtype": "method",
+            "name": "shuffleChildren",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.InnerNode",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 663,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Sequencer inner node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.Sequencer",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 674,
+            "description": "Node functionality, called once per update.",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Sequencer",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 750,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Selector inner node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.Selector",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 761,
+            "description": "Node functionality, called once per update.",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Selector",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 838,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Until Failure inner node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.UntilFailure",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 849,
+            "description": "Node functionality, called once per update.",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.UntilFailure",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 929,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Until Success inner node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.UntilSuccess",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 940,
+            "description": "Node functionality, called once per update.",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.UntilSuccess",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1017,
+            "description": "Timer duration in milliseconds",
+            "itemtype": "property",
+            "name": "timerDuration",
+            "type": "number",
+            "default": "5",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.TimeLoop",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1031,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Time Loop inner node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.TimeLoop",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1042,
+            "description": "Node functionality, called once per update.",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.TimeLoop",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1112,
+            "description": "Timer duration in milliseconds",
+            "itemtype": "property",
+            "name": "timerDuration",
+            "type": "number",
+            "default": "5",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.TimeTrial",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1126,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Time Trial inner node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.TimeTrial",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1137,
+            "description": "Node functionality, called once per update.",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.TimeTrial",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1214,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Inverter inner node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.Inverter",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1225,
+            "description": "Node functionality, called once per update.",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Inverter",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1263,
+            "description": "Passes a child node as candidate for inclusion.\nChecks for validity; a child cannot be its own parent or ancestor.\nCandidate is only appended if it is legal.\nInverter nodes can only have one child, and replace old children\nif new ones are added.",
+            "itemtype": "method",
+            "name": "addChild",
+            "params": [
+                {
+                    "name": "candidate",
+                    "description": "Node to add as child",
+                    "type": "Kiwi.Plugins.AiTree.OuterNode"
+                }
+            ],
+            "return": {
+                "description": "boolean"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Inverter",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1310,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Success outer node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.Success",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1320,
+            "description": "Node functionality",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Success",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1351,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Failure outer node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.Failure",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1361,
+            "description": "Node functionality",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Failure",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1392,
+            "description": "The number of times this node will run before succeeding",
+            "itemtype": "property",
+            "name": "max",
+            "type": "number",
+            "default": "1",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Counter",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1401,
+            "description": "The current count",
+            "itemtype": "property",
+            "name": "count",
+            "type": "number",
+            "default": "0",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Counter",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1410,
+            "description": "Whether the node will reset on ready, or only on completion.",
+            "itemtype": "property",
+            "name": "resetOnReady",
+            "type": "boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Counter",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1423,
+            "description": "Default node name.",
+            "itemtype": "property",
+            "name": "DEFAULT_NODE_NAME",
+            "default": "\"Counter outer node\"",
+            "type": "{string}",
+            "access": "public",
+            "tagname": "",
+            "final": 1,
+            "class": "Kiwi.Plugins.AiTree.Counter",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        },
+        {
+            "file": "src/ai-tree-1.0.0.js",
+            "line": 1433,
+            "description": "Node functionality",
+            "itemtype": "method",
+            "name": "_run",
+            "access": "private",
+            "tagname": "",
+            "class": "Kiwi.Plugins.AiTree.Counter",
+            "module": "Kiwi",
+            "submodule": "Plugins",
+            "namespace": "Kiwi.Plugins.AiTree"
+        }
+    ],
+    "warnings": []
+}
