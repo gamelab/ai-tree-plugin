@@ -75,9 +75,7 @@ To create an AI tree and add it to an entity, use the following form:
 ```javascript
 
 // Create AI object
-var ai = new Kiwi.Plugins.AiTree.Ai( {
-		entity: targetEntity
-	} );
+var ai = new Kiwi.Plugins.AiTree.Ai( targetEntity );
 
 // Add as a component
 targetEntity.components.add( ai );
